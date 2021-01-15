@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>pick-up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="primary-bg">
+  <div class="light-bg padding-xs ion-padding-top">
+
+    <ion-badge color="secondary" class="ion-margin-bottom">{{ trip.payment_method }}</ion-badge>
+
+    <ion-list class="ion-margin-top" lines="none">
+      <ion-item class="round secondary-bg ion-margin-top">
+        <ion-icon name="pin" color="light" slot="start"></ion-icon>
+        <ion-label>
+          <ion-text color="light">
+            <span>{{ trip.origin.vicinity }}</span>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+      <ion-item class="round ion-margin-top">
+        <ion-icon name="flag-outline" slot="start"></ion-icon>
+        <ion-label>
+          <span>{{ trip.destination.vicinity }}</span>
+        </ion-label>
+      </ion-item>
+      <ion-item class="round secondary-bg ion-margin-top">
+        <ion-icon name="call" color="light" slot="start"></ion-icon>
+        <ion-label>
+          <ion-text color="light">
+            <span>{{(passenger)?.phoneNumber }}</span>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="align-bottom ion-padding">
+    <ion-button expand="block" color="secondary" (click)="pickup()">PICK UP</ion-button>
+  </div>
+</ion-content>

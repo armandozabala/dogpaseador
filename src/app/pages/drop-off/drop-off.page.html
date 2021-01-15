@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Drop Off</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="pick-up primary-bg">
+  <div class="light-bg padding-xs ion-padding-top">
+
+    <ion-badge color="secondary" class="ion-margin-bottom">{{ trip?.payment_method }}</ion-badge>
+
+    <ion-list class="ion-margin-top" lines="none">
+      <ion-item class="round secondary-bg ion-margin-top">
+        <ion-icon name="flag-outline" color="light" slot="start"></ion-icon>
+        <ion-label>
+          <ion-text color="light">
+            <span>{{ trip?.destination.vicinity }}</span>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="bottom-buttons full-width ion-padding">
+    <ion-button expand="block" color="secondary" (click)="showPayment()">PAYMENT</ion-button>
+  </div>
+</ion-content>

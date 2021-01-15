@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Job</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" class="ion-text-center">
+        <ion-icon name="pin" class="icon-job"></ion-icon>
+        <div class="distance">{{ job.origin.distance }}km</div>
+      </ion-col>
+      <ion-col class="text-middle" size="10">
+        <h5>{{ job.origin.vicinity }}</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" class="ion-text-center">
+        <ion-icon name="flag-outline" class="icon-job"></ion-icon>
+        <div class="distance">{{ job.destination.distance }}km</div>
+      </ion-col>
+      <ion-col class="text-middle" size="10">
+        <h5>{{ job.destination.vicinity }}</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- buttons on bottom-->
+  <ion-grid class="bottom-buttons">
+    <ion-row>
+      <ion-col size="5">
+        <ion-button expand="block" color="danger" (click)="close()">SKIP</ion-button>
+      </ion-col>
+      <ion-col size="2" class="ion-text-center remaining">
+        <span>{{ remainingTime }}</span>
+      </ion-col>
+      <ion-col size="5">
+        <ion-button expand="block" color="secondary" (click)="accept()">SELECT</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
