@@ -10,5 +10,4 @@ export let TRIP_STATUS_FINISHED = "finished";
 
 export let TRANSACTION_TYPE_WITHDRAW = "withdraw";
 
-export let DEFAULT_AVATAR =
-  "https://freeiconshop.com/wp-content/uploads/edd/person-outline-filled.png";
+export let DEFAULT_AVATAR ="https://freeiconshop.com/wp-content/uploads/edd/person-outline-filled.png";

@@ -14,7 +14,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 
 import { AuthService } from "src/app/services/auth.service";
 import { SettingService } from "src/app/services/setting.service";
-import { Firebase } from '@ionic-native/firebase/ngx';
+
 
 @Component({
   selector: "app-user",
@@ -22,12 +22,13 @@ import { Firebase } from '@ionic-native/firebase/ngx';
   styleUrls: ["./user.page.scss"],
 })
 export class UserPage implements OnInit {
-  user: any;
+  user: any ={
+     photoURL: ''
+  }
   types: Array<any> = [];
 
   constructor(
     public router: Router,
-    private firebase: Firebase,
     private storage: AngularFireStorage,
     public authService: AuthService,
     public toastCtrl: ToastController,
@@ -35,6 +36,7 @@ export class UserPage implements OnInit {
     public settingService: SettingService,
     public alertCtrl: AlertController
   ) {
+   
     this.getData();
   }
 
@@ -42,6 +44,8 @@ export class UserPage implements OnInit {
 
   async getData() {
     const user: any = await this.authService.getUserData();
+
+    
 
     // list of vehicle types
     this.settingService
@@ -67,6 +71,7 @@ export class UserPage implements OnInit {
         // snapshot.id = user.uid;
         this.user = snapshot;
         this.user.uid = user.uid;
+        this.user.photoURL = user.photoURL ? user.photoURL : '../assets/icon/favicon.png'
       });
   }
 

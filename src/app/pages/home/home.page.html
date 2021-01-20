@@ -13,6 +13,16 @@
 
 <ion-content>
 
+  <div class="driver-top primary-bg ion-text-center ion-padding" *ngIf="driver">
+    <div class="driver-picture">
+      <img class="profile-picture circle" src="{{ driver.photoURL }}">
+     
+    </div>
+    <ion-text color="primary">
+      <h2>{{ driver.name }}</h2>
+    </ion-text>
+  </div>
+
   <ion-item>
     <ion-label>{{ activo }}</ion-label>
     <ion-toggle [(ngModel)]="ban" (ionChange)="update($event)"></ion-toggle>

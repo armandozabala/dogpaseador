@@ -17,7 +17,7 @@ import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { environment } from '../environments/environment';
 import { Geolocation } from "@ionic-native/geolocation/ngx";
 import { BackgroundMode } from "@ionic-native/background-mode/ngx";
-import { Firebase } from "@ionic-native/firebase/ngx";
+
 
 
 @NgModule({
@@ -37,7 +37,6 @@ import { Firebase } from "@ionic-native/firebase/ngx";
     StatusBar,
     SplashScreen,
     Geolocation,
-    Firebase,
     BackgroundMode,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],

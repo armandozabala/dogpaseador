@@ -12,9 +12,9 @@ import { ModalJobPage } from '../modal-job/modal-job.page';
   styleUrls: ["./home.page.scss"],
 })
 export class HomePage implements OnInit {
-  activo = "Offline";
-  ban = false;
-
+  activo = "Activo";
+  ban = true;
+  user:any;
 
 
   constructor(
@@ -26,6 +26,7 @@ export class HomePage implements OnInit {
     public authService: AuthService,
     public menuCtrl: MenuController
   ) {
+    this.authService.activo = true;
     this.menuCtrl.enable(true);
     this.getDriver();
   }

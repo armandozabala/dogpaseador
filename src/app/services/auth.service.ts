@@ -107,10 +107,10 @@ export class AuthService {
     const photoUrl = user.photoURL || DEFAULT_AVATAR;
     const userData: any = await this.getUserData();
 
-    userData.updateProfile({
+   /* userData.updateProfile({
       displayName: name,
       photoURL: photoUrl,
-    });
+    });*/
 
     // create or update passenger
     await this.db.object("drivers/" + user.uid).update({

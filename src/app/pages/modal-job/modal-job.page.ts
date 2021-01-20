@@ -36,14 +36,14 @@ export class ModalJobPage implements OnInit {
             this.job.origin.location.lng
           )
           .toFixed(0);
-        this.job.destination.distance = this.placeService
+         /* this.job.destination.distance = this.placeService
           .calcCrow(
             resp.coords.latitude,
             resp.coords.longitude,
             this.job.destination.location.lat,
             this.job.destination.location.lng
           )
-          .toFixed(0);
+          .toFixed(0);*/
       },
       (err) => {
         console.log(err);
