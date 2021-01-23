@@ -24,6 +24,7 @@ export class ModalJobPage implements OnInit {
   ) {
     this.job = navParams.get("deal");
 
+    console.log(this.job);
     // get current location
     geolocation.getCurrentPosition().then(
       (resp) => {

@@ -15,7 +15,7 @@ export class PickUpPage implements OnInit {
 
   constructor(public router: Router, public tripService: TripService) {
     this.trip = tripService.getCurrentTrip();
-    // console.log('Trip', this.trip);
+     console.log('Trip', this.trip);
     tripService
       .getPassenger(this.trip.passengerId)
       .pipe(take(1))

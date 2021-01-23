@@ -1,0 +1,22 @@
+.driver-top {
+    min-height: 200px;
+}
+
+
+
+.driver-picture {
+    min-height: 150px;
+    padding-top: 30px;
+
+    &>img {
+        width: 200px;
+        height: 200px;
+        border: 1px solid var(--ion-color-light);
+        background: var(--ion-color-light);
+        border-radius: 50%;
+    }
+}
+
+#avatar {
+    display: none;
+}
