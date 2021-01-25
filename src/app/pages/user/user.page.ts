@@ -70,8 +70,9 @@ export class UserPage implements OnInit {
       .subscribe((snapshot) => {
         // snapshot.id = user.uid;
         this.user = snapshot;
+        console.log(this.user);
         this.user.uid = user.uid;
-        this.user.photoURL = user.photoURL ? user.photoURL : '../assets/icon/favicon.png'
+        this.user.photoURL = this.user.photoURL ? this.user.photoURL : '../assets/icon/favicon.png'
       });
   }
 

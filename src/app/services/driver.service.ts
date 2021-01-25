@@ -19,7 +19,7 @@ export class DriverService {
 
   // get driver by id
   async getDriver() {
-    const user: any = this.user || (await this.authService.getUserData());
+    const user: any = await this.authService.getUserData(); //this.user ||
 
     return new Promise((resolve) => {
       this.db

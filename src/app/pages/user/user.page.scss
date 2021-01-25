@@ -1,14 +1,14 @@
 .driver-top {
-    min-height: 250px;
+    min-height: 100px;
 }
 
 .driver-picture {
-    min-height: 150px;
+    min-height: 20px;
     padding-top: 30px;
 
     &>img {
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 180px;
         border: 1px solid var(--ion-color-light);
         background: var(--ion-color-light);
         border-radius: 50%;

@@ -115,6 +115,7 @@ export class AuthService {
     // create or update passenger
     await this.db.object("drivers/" + user.uid).update({
       name,
+      userId: user.uid,
       photoURL: photoUrl,
       email: user.email,
       phoneNumber: user.phoneNumber || "",
